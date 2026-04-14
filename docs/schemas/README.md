@@ -14,6 +14,8 @@
 - `mentor_exemplar_index.schema.json`：导师高质量正向样例索引
 - `mentor_student_gap_model.schema.json`：导师-用户差距模型
 - `defect_ledger.schema.json`：显式 must-fix 缺陷账本
+- `agent_swarm_audit_report.schema.json`：单个 agent 的人工审读报告
+- `agent_swarm_consensus.schema.json`：多 agent 审读汇总共识
 - `micro_polish_packet.schema.json`：逐句/逐词改稿任务包
 - `micro_polish_result.schema.json`：逐句/逐词改稿结果
 - `compiled_mentor_profile.schema.json`：导师脑编译产物

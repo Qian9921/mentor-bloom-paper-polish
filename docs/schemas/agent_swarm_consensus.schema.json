@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/agent_swarm_consensus.schema.json",
+  "title": "Agent Swarm Consensus",
+  "description": "Merged consensus from multiple agent-authored audit reports.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "source_reports",
+    "consensus_findings"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "draft_id": {
+      "type": "string"
+    },
+    "source_reports": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "section_verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_id",
+          "verdict"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "pass_but_tighten",
+              "borderline",
+              "fail"
+            ]
+          },
+          "supporting_reports": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "consensus_findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_locator",
+          "issue_type",
+          "severity",
+          "issue",
+          "rewrite_direction",
+          "supporting_auditors"
+        ],
+        "properties": {
+          "target_locator": {
+            "type": "string"
+          },
+          "issue_type": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "must_fix",
+              "strong",
+              "soft"
+            ]
+          },
+          "issue": {
+            "type": "string"
+          },
+          "rewrite_direction": {
+            "type": "string"
+          },
+          "supporting_auditors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "blocking_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/agent_swarm_audit_report.schema.json",
+  "title": "Agent Swarm Audit Report",
+  "description": "One agent-authored read-only audit report over a draft slice.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "auditor",
+    "scope",
+    "findings"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "draft_id": {
+      "type": "string"
+    },
+    "auditor": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_file",
+        "sections"
+      ],
+      "properties": {
+        "target_file": {
+          "type": "string"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "section_verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_id",
+          "verdict"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "pass",
+              "pass_but_tighten",
+              "borderline",
+              "fail"
+            ]
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target_locator",
+          "issue_type",
+          "severity",
+          "issue",
+          "rewrite_direction"
+        ],
+        "properties": {
+          "target_locator": {
+            "type": "string"
+          },
+          "issue_type": {
+            "type": "string",
+            "enum": [
+              "opening",
+              "sentence_heaviness",
+              "transition",
+              "paragraph_overload",
+              "figure_guidance",
+              "method_exposition",
+              "other"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "must_fix",
+              "strong",
+              "soft"
+            ]
+          },
+          "issue": {
+            "type": "string"
+          },
+          "rewrite_direction": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "overall_verdict": {
+      "type": "string",
+      "enum": [
+        "pass",
+        "borderline",
+        "fail"
+      ]
+    }
+  }
+}

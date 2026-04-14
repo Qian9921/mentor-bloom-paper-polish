@@ -40,6 +40,9 @@ This repository focuses on three practical abilities:
 6. **Explicit defect ledger**  
    Treat mentor-called or user-called must-fix issues as blocking defects that must be cleared before the draft can be declared clean.
 
+7. **Agent-swarm audit**  
+   Let multiple agents read the real draft directly, judge paragraph openings and sentence heaviness with context, and then merge those human-style audits into a consensus artifact.
+
 这个仓库当前聚焦三个实用能力：
 
 1. **导师脑蒸馏**  
@@ -59,6 +62,9 @@ This repository focuses on three practical abilities:
 
 6. **显式缺陷账本**  
    把导师或用户点名的 must-fix 问题变成 blocking defects，在逐条核销前不允许宣称稿件已经 clean。
+
+7. **多 agent 审稿汇总**  
+   让多个 agent 直接读真实稿件，在保留上下文的前提下判断开头句、重句、转折句是否过关，再把这些人工审读合并成共识结果。
 
 ---
 
