@@ -66,6 +66,12 @@ This repository focuses on three practical abilities:
 7. **多 agent 审稿汇总**  
    让多个 agent 直接读真实稿件，在保留上下文的前提下判断开头句、重句、转折句是否过关，再把这些人工审读合并成共识结果。
 
+8. **Section-level mini-swarms for long papers**
+   For long papers, the framework should assign a dedicated mini-swarm to each section instead of using one flat whole-paper audit lane.
+
+8. **长论文的 section 级小型 swarm**
+   对长论文，框架应给每个 section 单独配一组 mini-swarm，而不是只用一个平铺的整篇审稿 lane。
+
 ---
 
 ## Recommended audit staffing / 推荐审稿编制
@@ -80,7 +86,17 @@ Recommended default:
   3. experiment setup / baselines
   4. results / diagnostics
   5. case study / mechanism / discussion / conclusion
-  6. consensus / defect-ledger aggregation
+6. consensus / defect-ledger aggregation
+
+For stricter long-paper review, upgrade to the **section swarm** model:
+
+- **per section: 5 auditors + 1 consensus + 1 reverse-check**
+- if concurrency is limited, run them in **waves**, not with a smaller logical team
+
+对于更严格的长论文审稿，升级到 **section swarm** 模型：
+
+- **每个 section：5 个审稿 agent + 1 个共识 agent + 1 个反查 agent**
+- 如果并发受限，就按 **waves** 分批执行，而不是减少逻辑编制
 
 对于长论文，默认推荐：
 

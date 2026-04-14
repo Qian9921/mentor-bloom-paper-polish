@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/section_swarm_plan.schema.json",
+  "title": "Section Swarm Plan",
+  "description": "Logical section-by-section staffing plan for agent-first long-paper audits.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "sections"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "draft_id": {
+      "type": "string"
+    },
+    "max_concurrent_agents": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_id",
+          "heading",
+          "logical_agents",
+          "waves"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "paragraph_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "logical_agents": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "waves": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "wave_id",
+                "agents"
+              ],
+              "properties": {
+                "wave_id": {
+                  "type": "string"
+                },
+                "agents": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

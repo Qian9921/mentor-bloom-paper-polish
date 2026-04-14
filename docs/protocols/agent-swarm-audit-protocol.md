@@ -98,6 +98,8 @@ For a short paper or note, use **3 audit agents + 1 consensus agent**:
 Do not reduce the swarm to one agent merely because scripts can pre-slice the draft.
 Scripts may help locate spans, but the semantic judgment still belongs to the agents.
 
+For long papers, prefer the stricter `section-swarm-execution-protocol.md`, where each section receives its own mini-swarm and reverse-check lane.
+
 ## When to use
 
 - final opening audits

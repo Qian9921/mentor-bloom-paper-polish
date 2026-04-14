@@ -16,6 +16,7 @@
 - `defect_ledger.schema.json`：显式 must-fix 缺陷账本
 - `agent_swarm_audit_report.schema.json`：单个 agent 的人工审读报告
 - `agent_swarm_consensus.schema.json`：多 agent 审读汇总共识
+- `section_swarm_plan.schema.json`：按 section 分配的逻辑 agent 编制计划
 - `micro_polish_packet.schema.json`：逐句/逐词改稿任务包
 - `micro_polish_result.schema.json`：逐句/逐词改稿结果
 - `compiled_mentor_profile.schema.json`：导师脑编译产物
