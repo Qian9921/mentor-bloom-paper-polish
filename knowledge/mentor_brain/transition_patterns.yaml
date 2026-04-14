@@ -1,0 +1,8 @@
+mentor_id: sample
+patterns:
+  - move: results_to_case_study
+    template: These run-level statistics show the mismatch, but they do not yet explain how it appears locally.
+  - move: discussion_to_limitations
+    template: These gains do not remove the method's boundary conditions.
+  - move: section_handoff
+    template: The next subsection therefore turns to ...

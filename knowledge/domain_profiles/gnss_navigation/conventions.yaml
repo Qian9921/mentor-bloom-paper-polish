@@ -1,0 +1,5 @@
+domain: gnss_navigation
+conventions:
+  - Name the comparator explicitly when using comparative language.
+  - Use metric names consistently across text, tables, and figures.
+  - Distinguish uncertainty credibility from generic risk wording.

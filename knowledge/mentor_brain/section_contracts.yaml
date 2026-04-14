@@ -1,0 +1,8 @@
+mentor_id: sample
+contracts:
+  - section: abstract
+    structure: problem -> challenge -> method -> mechanism -> quantified result -> practical value
+  - section: introduction
+    structure: importance -> challenge -> limitations -> gap -> contribution
+  - section: results
+    structure: object -> observation -> comparison -> explanation -> synthesis

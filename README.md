@@ -93,7 +93,9 @@ This repository focuses on three practical abilities:
 │  ├─ protocols/      # Agent/script/skill execution rules
 │  ├─ rubrics/        # Diagnostic rubrics
 │  └─ schemas/        # JSON schema contracts
+├─ knowledge/         # Mentor-brain sublibraries + domain profiles
 ├─ scripts/           # Deterministic tooling only
+├─ templates/         # Paragraph cards + section contracts
 ├─ hooks/             # Hook design notes / placeholders
 ├─ examples/          # Safe sample inputs for public/demo use
 └─ .codex/skills/     # Repo-local Codex skill scaffolds
@@ -105,7 +107,9 @@ This repository focuses on three practical abilities:
 - `docs/protocols/`：agent/script/skill 分层协议  
 - `docs/rubrics/`：诊断规则  
 - `docs/schemas/`：artifact 合同  
+- `knowledge/`：导师脑子库与领域 profile  
 - `scripts/`：确定性工位，不替代 agent 思考  
+- `templates/`：paragraph cards 与 section contracts  
 - `examples/`：公开可用的示例输入  
 - `.codex/skills/`：repo-local skill 入口
 

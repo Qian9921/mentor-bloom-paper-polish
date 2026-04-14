@@ -1,0 +1,14 @@
+mentor_id: sample
+operators:
+  - name: split_dense_paragraph
+    level: paragraph
+    goal: reduce paragraph overload
+  - name: name_the_comparator
+    level: sentence
+    goal: fix underspecified comparison
+  - name: replace_vague_term_with_domain_term
+    level: word
+    goal: increase technical precision
+  - name: strengthen_conclusion_implication
+    level: sentence
+    goal: improve practical landing

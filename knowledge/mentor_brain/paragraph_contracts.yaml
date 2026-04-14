@@ -1,0 +1,13 @@
+mentor_id: sample
+contracts:
+  - name: result_paragraph
+    required_moves:
+      - object
+      - observation
+      - scoped_comparison
+      - synthesis
+  - name: limitation_paragraph
+    required_moves:
+      - limitation
+      - consequence
+      - future_work_response

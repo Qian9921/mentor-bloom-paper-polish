@@ -1,0 +1,8 @@
+section: introduction
+structure: importance -> challenge -> prior limitations -> gap -> contribution block
+must_include:
+  - problem framing
+  - gap
+  - contribution block
+must_avoid:
+  - history dump

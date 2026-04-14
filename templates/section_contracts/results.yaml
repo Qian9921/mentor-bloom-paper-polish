@@ -1,0 +1,7 @@
+section: results
+structure: object -> observation -> scoped comparison -> explanation -> synthesis
+must_include:
+  - what the figure/table reports
+  - why the gain matters
+must_avoid:
+  - benchmark report tone

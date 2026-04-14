@@ -1,0 +1,8 @@
+mentor_id: sample
+patterns:
+  - function: abstract_method_sentence
+    pattern: problem -> method -> key mechanism
+  - function: result_takeaway_sentence
+    pattern: local takeaway -> supporting metric -> bounded implication
+  - function: conclusion_landing_sentence
+    pattern: result summary -> practical value

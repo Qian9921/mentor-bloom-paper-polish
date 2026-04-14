@@ -1,0 +1,9 @@
+name: limitation_paragraph
+goal: State a real boundary and pair it with a future-work direction.
+slots:
+  - limitation
+  - consequence
+  - response or future work
+avoid:
+  - isolated limitation line
+  - vague future work

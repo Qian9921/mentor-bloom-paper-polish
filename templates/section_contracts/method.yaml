@@ -1,0 +1,7 @@
+section: method
+structure: overview -> setup -> mechanism -> formulation -> training or usage
+must_include:
+  - section roadmap
+  - explanation before formalism
+must_avoid:
+  - immediate dense equations without reader guidance

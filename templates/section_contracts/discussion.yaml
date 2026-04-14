@@ -1,0 +1,7 @@
+section: discussion
+structure: main point -> implication -> limitations -> future directions
+must_include:
+  - practical implication
+  - explicit boundary
+must_avoid:
+  - repetition of result section

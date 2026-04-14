@@ -1,0 +1,13 @@
+mentor_id: sample
+description: |
+  Sample mentor lexicon scaffold.
+entries:
+  - term: positioning accuracy
+    type: preferred_term
+    notes: Prefer concrete technical metrics over generic performance language.
+  - term: credibility
+    type: preferred_term
+    notes: Use as the umbrella uncertainty-quality term when it matches the paper's framing.
+  - term: better performance
+    type: avoid_term
+    replacement_hint: Name the exact metric and comparator.

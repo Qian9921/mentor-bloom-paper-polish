@@ -1,0 +1,10 @@
+mentor_id: sample
+description: |
+  Expressions that often introduce AI flavor, vagueness, or hype.
+patterns:
+  - phrase: very novel
+    reason: novelty claim without evidence
+  - phrase: it is worth noting that
+    reason: template-style filler phrase
+  - phrase: better performance
+    reason: under-specified evaluation language

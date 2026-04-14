@@ -1,0 +1,9 @@
+name: comparison_paragraph
+goal: Make comparison claims concrete and bounded.
+slots:
+  - comparator
+  - metric
+  - condition
+  - observed difference
+avoid:
+  - better/larger/improvement without scope

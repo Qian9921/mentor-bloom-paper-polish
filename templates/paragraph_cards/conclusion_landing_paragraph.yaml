@@ -1,0 +1,8 @@
+name: conclusion_landing_paragraph
+goal: Close the paper with a scoped practical implication.
+slots:
+  - result summary
+  - practical meaning
+  - boundary if needed
+avoid:
+  - inflated final slogan

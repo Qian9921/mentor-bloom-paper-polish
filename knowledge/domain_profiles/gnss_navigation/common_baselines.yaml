@@ -1,0 +1,8 @@
+domain: gnss_navigation
+baselines:
+  - least squares
+  - weighted least squares
+  - goGPS
+  - DFGO (MAE)
+  - GaussianFDE
+  - robust GMM

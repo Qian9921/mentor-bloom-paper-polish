@@ -1,0 +1,9 @@
+name: motivation_paragraph
+goal: Explain why the problem matters before discussing the method.
+slots:
+  - problem importance
+  - downstream consequence
+  - why current practice is insufficient
+avoid:
+  - abstract slogans
+  - history dump without problem framing

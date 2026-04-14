@@ -1,0 +1,11 @@
+name: result_paragraph
+goal: Help the reader read the result object correctly and understand the takeaway.
+slots:
+  - object
+  - observation
+  - scoped comparison
+  - explanation or implication
+  - synthesis
+avoid:
+  - metric dump
+  - summary-first narration

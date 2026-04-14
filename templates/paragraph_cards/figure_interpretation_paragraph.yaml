@@ -1,0 +1,9 @@
+name: figure_interpretation_paragraph
+goal: Interpret a figure in a mentor-style, evidence-first way.
+slots:
+  - what the figure shows
+  - visible observation
+  - supported takeaway
+avoid:
+  - conclusion before explanation
+  - unsupported interpretation

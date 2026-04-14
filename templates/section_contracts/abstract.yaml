@@ -1,0 +1,8 @@
+section: abstract
+structure: problem -> failure mode -> method -> mechanism -> quantified result -> operational value
+must_include:
+  - key mechanism
+  - quantified gain
+  - practical value
+must_avoid:
+  - novelty slogan without evidence
