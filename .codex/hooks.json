@@ -20,6 +20,11 @@
             "type": "command",
             "command": "python3 hooks/post_bash_json_check.py",
             "statusMessage": "Checking generated mentor-bloom artifacts"
+          },
+          {
+            "type": "command",
+            "command": "python3 hooks/repo_safety_check.py",
+            "statusMessage": "Checking public repo safety boundaries"
           }
         ]
       }

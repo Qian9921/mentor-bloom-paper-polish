@@ -106,6 +106,7 @@ This repository focuses on three practical abilities:
 ├─ examples/          # Safe sample inputs for public/demo use
 ├─ .codex/commands/   # Repo-local Codex command docs
 ├─ .codex/hooks.json  # Lightweight hook wiring example
+├─ .codex/prompts/    # Repo-local specialist prompt surfaces
 └─ .codex/skills/     # Repo-local Codex skill scaffolds
 ```
 
@@ -121,6 +122,7 @@ This repository focuses on three practical abilities:
 - `examples/`：公开可用的示例输入  
 - `.codex/commands/`：repo-local command 文档
 - `.codex/hooks.json`：轻量 hook 配置示例
+- `.codex/prompts/`：repo-local specialist prompt surfaces
 - `.codex/skills/`：repo-local skill 入口
 
 ---
