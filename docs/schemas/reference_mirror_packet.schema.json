@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/reference_mirror_packet.schema.json",
+  "title": "Reference Mirror Packet",
+  "description": "Agent-consumable packet that pairs weak draft sections with mentor/reference snippets for structural and rhetorical comparison.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "mentor_manifest",
+    "targets"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "draft_id": {
+      "type": "string"
+    },
+    "mentor_manifest": {
+      "type": "string"
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_id",
+          "heading",
+          "reason",
+          "mirror_snippets",
+          "comparison_questions"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "linked_findings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mirror_snippets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "source_path",
+                "text",
+                "match_reason",
+                "score"
+              ],
+              "properties": {
+                "source_path": {
+                  "type": "string"
+                },
+                "line_hint": {
+                  "type": "integer"
+                },
+                "text": {
+                  "type": "string"
+                },
+                "match_reason": {
+                  "type": "string"
+                },
+                "score": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "comparison_questions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

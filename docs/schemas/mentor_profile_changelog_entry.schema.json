@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/mentor_profile_changelog_entry.schema.json",
+  "title": "Mentor Profile Changelog Entry",
+  "description": "Promotion record for a mentor profile version.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "promoted_at",
+    "mentor_id",
+    "new_version",
+    "profile_path",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "promoted_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mentor_id": {
+      "type": "string"
+    },
+    "previous_version": {
+      "type": "string"
+    },
+    "new_version": {
+      "type": "string"
+    },
+    "profile_path": {
+      "type": "string"
+    },
+    "delta_path": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "approved",
+        "rejected"
+      ]
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

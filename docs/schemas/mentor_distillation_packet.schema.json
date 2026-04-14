@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/mentor_distillation_packet.schema.json",
+  "title": "Mentor Distillation Packet",
+  "description": "Agent-consumable packet used by Codex/agents to synthesize a compiled mentor profile.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "mentor_id",
+    "source_manifest",
+    "source_summary",
+    "evidence_snippets",
+    "candidate_rules",
+    "candidate_terms",
+    "questions_to_answer",
+    "output_contract"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mentor_id": {
+      "type": "string"
+    },
+    "source_manifest": {
+      "type": "string"
+    },
+    "source_summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_count",
+        "by_material_type",
+        "by_trust_tier"
+      ],
+      "properties": {
+        "file_count": {
+          "type": "integer"
+        },
+        "by_material_type": {
+          "type": "object"
+        },
+        "by_trust_tier": {
+          "type": "object"
+        }
+      }
+    },
+    "evidence_snippets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "snippet_id",
+          "source_path",
+          "source_type",
+          "trust_tier",
+          "text"
+        ],
+        "properties": {
+          "snippet_id": {
+            "type": "string"
+          },
+          "source_path": {
+            "type": "string"
+          },
+          "source_type": {
+            "type": "string"
+          },
+          "trust_tier": {
+            "type": "string"
+          },
+          "line_hint": {
+            "type": "integer"
+          },
+          "text": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "candidate_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "source_path"
+        ],
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "source_path": {
+            "type": "string"
+          },
+          "trust_tier": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "candidate_terms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "questions_to_answer": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_schema",
+        "required_sections",
+        "must_cite_evidence"
+      ],
+      "properties": {
+        "target_schema": {
+          "type": "string"
+        },
+        "required_sections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "must_cite_evidence": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

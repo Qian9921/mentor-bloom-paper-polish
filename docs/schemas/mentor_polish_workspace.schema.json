@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/mentor_polish_workspace.schema.json",
+  "title": "Mentor Polish Workspace Manifest",
+  "description": "Manifest for pass-based agent-consumable mentor-polish workspaces.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "pass_briefs",
+    "section_tasks"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "draft_id": {
+      "type": "string"
+    },
+    "pass_briefs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "section_tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "section_id",
+          "heading",
+          "task_file",
+          "passes"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "string"
+          },
+          "heading": {
+            "type": "string"
+          },
+          "task_file": {
+            "type": "string"
+          },
+          "passes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

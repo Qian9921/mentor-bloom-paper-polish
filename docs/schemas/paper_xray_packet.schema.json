@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/paper_xray_packet.schema.json",
+  "title": "Paper Xray Packet",
+  "description": "Agent-consumable packet for diagnosing a mature draft using mentor profile and lightweight project context.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "mentor_profile",
+    "project_fact_sheet",
+    "draft_sections",
+    "term_findings",
+    "truth_findings",
+    "rubric_dimensions",
+    "output_contract"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "draft_id": {
+      "type": "string"
+    },
+    "mentor_profile": {
+      "type": "string"
+    },
+    "project_fact_sheet": {
+      "type": "string"
+    },
+    "draft_sections": {
+      "type": "array"
+    },
+    "term_findings": {
+      "type": "array"
+    },
+    "truth_findings": {
+      "type": "array"
+    },
+    "rubric_dimensions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_schema",
+        "required_fields"
+      ],
+      "properties": {
+        "target_schema": {
+          "type": "string"
+        },
+        "required_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

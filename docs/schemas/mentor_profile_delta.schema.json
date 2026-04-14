@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/mentor_profile_delta.schema.json",
+  "title": "Mentor Profile Delta",
+  "description": "Agent-authored incremental update proposal for a mentor profile.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "mentor_id",
+    "based_on_profile",
+    "summary",
+    "proposed_changes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mentor_id": {
+      "type": "string"
+    },
+    "based_on_profile": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "evidence_basis": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proposed_changes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "add_global_rules": {
+          "type": "array"
+        },
+        "strengthen_global_rules": {
+          "type": "array"
+        },
+        "add_preferred_terms": {
+          "type": "array"
+        },
+        "add_disallowed_terms": {
+          "type": "array"
+        },
+        "add_rejection_patterns": {
+          "type": "array"
+        },
+        "add_rewrite_patterns": {
+          "type": "array"
+        },
+        "update_section_playbooks": {
+          "type": "object"
+        },
+        "retire_or_downgrade": {
+          "type": "array"
+        }
+      }
+    },
+    "conflicts_or_uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

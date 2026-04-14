@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/mentor_evolution_packet.schema.json",
+  "title": "Mentor Evolution Packet",
+  "description": "Agent-consumable packet for incremental mentor-brain evolution using new materials plus the current mentor profile.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "mentor_id",
+    "current_profile",
+    "new_material_manifest",
+    "new_evidence_snippets",
+    "questions_to_answer",
+    "promotion_contract"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mentor_id": {
+      "type": "string"
+    },
+    "current_profile": {
+      "type": "string"
+    },
+    "new_material_manifest": {
+      "type": "string"
+    },
+    "new_evidence_snippets": {
+      "type": "array"
+    },
+    "questions_to_answer": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "promotion_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "delta_target",
+        "profile_target",
+        "must_preserve_history"
+      ],
+      "properties": {
+        "delta_target": {
+          "type": "string"
+        },
+        "profile_target": {
+          "type": "string"
+        },
+        "must_preserve_history": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

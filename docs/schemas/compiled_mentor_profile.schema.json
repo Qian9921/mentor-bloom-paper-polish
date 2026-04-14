@@ -1,0 +1,225 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/compiled_mentor_profile.schema.json",
+  "title": "Compiled Mentor Profile",
+  "description": "Executable supervisor-writing profile distilled from mentor materials.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "mentor_id",
+    "source_manifest",
+    "global_rules",
+    "terminology_preferences",
+    "rejection_lexicon",
+    "rewrite_patterns",
+    "section_playbooks"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mentor_id": {
+      "type": "string"
+    },
+    "source_manifest": {
+      "type": "string"
+    },
+    "style_axes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "axis",
+          "preference"
+        ],
+        "properties": {
+          "axis": {
+            "type": "string"
+          },
+          "preference": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "global_rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "rule",
+          "rationale"
+        ],
+        "properties": {
+          "rule": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "must",
+              "strong",
+              "soft"
+            ]
+          }
+        }
+      }
+    },
+    "terminology_preferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "preferred_terms",
+        "disallowed_terms"
+      ],
+      "properties": {
+        "preferred_terms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "term"
+            ],
+            "properties": {
+              "term": {
+                "type": "string"
+              },
+              "aliases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "notes": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "disallowed_terms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "term"
+            ],
+            "properties": {
+              "term": {
+                "type": "string"
+              },
+              "replacement_hint": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rejection_lexicon": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "pattern",
+          "reason"
+        ],
+        "properties": {
+          "pattern": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        }
+      }
+    },
+    "rewrite_patterns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "before_pattern",
+          "after_pattern",
+          "use_when"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "before_pattern": {
+            "type": "string"
+          },
+          "after_pattern": {
+            "type": "string"
+          },
+          "use_when": {
+            "type": "string"
+          },
+          "avoid_when": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "section_playbooks": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "goal": {
+            "type": "string"
+          },
+          "must_include": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "must_avoid": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tone": {
+            "type": "string"
+          },
+          "structure_hint": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

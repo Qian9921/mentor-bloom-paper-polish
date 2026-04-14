@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.1.0",
+  "generated_at": "2026-04-14T00:00:00Z",
+  "mentor_id": "sample-mentor",
+  "source_manifest": "artifacts/mentor_brain/sample_manifest.json",
+  "global_rules": [
+    {
+      "rule": "Prefer precise technical claims over generic praise.",
+      "rationale": "导师更关注可验证贡献。"
+    },
+    {
+      "rule": "State what matters and why it matters in the same local unit.",
+      "rationale": "避免结果和价值脱节。"
+    }
+  ],
+  "terminology_preferences": {
+    "preferred_terms": [
+      {
+        "term": "integrated navigation",
+        "aliases": [
+          "integrated positioning"
+        ],
+        "notes": "在本文语境里优先用 navigation。"
+      },
+      {
+        "term": "positioning accuracy",
+        "aliases": [
+          "localization accuracy"
+        ],
+        "notes": "与 GNSS/navigation 语境对齐。"
+      }
+    ],
+    "disallowed_terms": [
+      {
+        "term": "very novel",
+        "replacement_hint": "state the contribution directly",
+        "reason": "空泛夸张。"
+      }
+    ]
+  },
+  "rejection_lexicon": [
+    {
+      "pattern": "it is worth noting that",
+      "reason": "模板腔太重。",
+      "severity": "medium"
+    }
+  ],
+  "rewrite_patterns": [
+    {
+      "name": "weak-result-to-value",
+      "before_pattern": "We improve the result.",
+      "after_pattern": "The method improves positioning accuracy under challenging signal conditions.",
+      "use_when": "需要把结果和价值绑定。",
+      "avoid_when": "证据不足。"
+    }
+  ],
+  "section_playbooks": {
+    "abstract": {
+      "goal": "State problem, method, evidence, and value compactly.",
+      "must_include": [
+        "problem context",
+        "main method",
+        "core evidence",
+        "practical value"
+      ],
+      "must_avoid": [
+        "generic novelty slogans"
+      ],
+      "tone": "tight and evidence-led",
+      "structure_hint": "problem -> gap -> method -> result -> value"
+    },
+    "introduction": {
+      "goal": "Explain why the problem matters before describing the method.",
+      "must_include": [
+        "problem importance",
+        "gap",
+        "paper contribution"
+      ],
+      "must_avoid": [
+        "history dump without positioning"
+      ],
+      "tone": "controlled and persuasive",
+      "structure_hint": "context -> limitation -> gap -> contribution"
+    }
+  }
+}

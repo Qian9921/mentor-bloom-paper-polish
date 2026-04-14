@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ipnl-paper-pilot.local/schemas/revision_agenda.schema.json",
+  "title": "Revision Agenda",
+  "description": "Ordered revision plan produced after xray diagnosis.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "strategy_summary",
+    "ordered_actions"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "draft_id": {
+      "type": "string"
+    },
+    "strategy_summary": {
+      "type": "string"
+    },
+    "ordered_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "priority",
+          "action_type",
+          "rationale",
+          "success_criteria"
+        ],
+        "properties": {
+          "priority": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "section_id": {
+            "type": "string"
+          },
+          "paragraph_id": {
+            "type": "string"
+          },
+          "action_type": {
+            "type": "string",
+            "enum": [
+              "protect_truth",
+              "tighten_claim",
+              "replace_ai_style",
+              "repair_transition",
+              "repair_paragraph_structure",
+              "fix_terminology",
+              "compress",
+              "rewrite"
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "linked_findings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "constraints": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "success_criteria": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

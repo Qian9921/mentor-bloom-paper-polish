@@ -1,0 +1,3 @@
+The contribution sentence should be sharper.
+Do not say "very novel" without evidence.
+Explain why the result matters for integrated navigation, not only that the metric is better.
