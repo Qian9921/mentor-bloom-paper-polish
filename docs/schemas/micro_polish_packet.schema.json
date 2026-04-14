@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/micro_polish_packet.schema.json",
+  "title": "Micro Polish Packet",
+  "description": "Agent-consumable packet for sentence-level and word-level mentor-style polishing.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "mentor_profile",
+    "mentor_lexicon",
+    "mentor_corpus_index",
+    "tasks"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "draft_id": { "type": "string" },
+    "mentor_profile": { "type": "string" },
+    "mentor_lexicon": { "type": "string" },
+    "mentor_corpus_index": { "type": "string" },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "task_id",
+          "section_id",
+          "sentence_text",
+          "task_type",
+          "issues"
+        ],
+        "properties": {
+          "task_id": { "type": "string" },
+          "section_id": { "type": "string" },
+          "paragraph_id": { "type": "string" },
+          "sentence_index": { "type": "integer" },
+          "sentence_text": { "type": "string" },
+          "task_type": {
+            "type": "string",
+            "enum": [
+              "word_replacement",
+              "phrase_replacement",
+              "transition_fix",
+              "comparator_fix",
+              "tighten_sentence",
+              "ending_landing"
+            ]
+          },
+          "issues": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "recommended_lexicon_entries": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "recommended_corpus_entries": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "constraints": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

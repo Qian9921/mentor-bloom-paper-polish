@@ -187,11 +187,15 @@ If possible, also prepare a **clean prose-only export** for better polishing qua
 - `$mentor-polish`  
   Build pass-based polishing workspaces and revise toward supervisor style
 
+- `$micro-polish`  
+  Run sentence-level and word-level mentor-style polishing with mentor lexicon/corpus support
+
 说明：
 
 - `$mentor-bloom` / `$bloom`：让导师脑持续进化  
 - `$paper-xray`：对成熟稿做结构化体检  
 - `$mentor-polish`：按导师式流程打包并润色
+- `$micro-polish`：做逐句/逐词的导师式微观润色
 
 ### Legacy alias / 兼容旧名
 
@@ -207,6 +211,7 @@ Typical usage:
 $mentor-bloom
 $paper-xray
 $mentor-polish
+$micro-polish
 ```
 
 如果你在 Codex 中打开这个仓库，`.codex/skills/` 下的 repo-local skill 就是推荐入口。
@@ -217,6 +222,7 @@ $mentor-polish
 $mentor-bloom
 $paper-xray
 $mentor-polish
+$micro-polish
 ```
 
 If your environment does **not** automatically expose repo-local skills, you still have two practical options:
@@ -255,6 +261,13 @@ If your environment does **not** automatically expose repo-local skills, you sti
 3. Build reference mirror packet + brief
 4. Build mentor polish briefs + pass-based workspace
 5. Let Codex/agent revise section by section
+
+### D. Micro polish / 逐句微观润色
+
+1. Build mentor lexicon
+2. Build mentor corpus index
+3. Build micro-polish packet + brief
+4. Let Codex/agent revise sentence-level tasks
 
 ### Minimal public demo flow / 最小公开演示流程
 
