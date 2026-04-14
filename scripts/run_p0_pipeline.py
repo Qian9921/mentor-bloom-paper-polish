@@ -65,6 +65,10 @@ def main() -> int:
     mirror_brief = args.output_dir / "reference_mirror_brief.md"
     polish_brief = args.output_dir / "mentor_polish_brief.md"
     polish_workspace_dir = args.output_dir / "mentor_polish_workspace"
+    mentor_lexicon = args.output_dir / "mentor_lexicon.json"
+    mentor_corpus = args.output_dir / "mentor_corpus_index.json"
+    micro_polish_packet = args.output_dir / "micro_polish_packet.json"
+    micro_polish_brief = args.output_dir / "micro_polish_brief.md"
 
     steps = []
     scripts = Path(__file__).resolve().parent
@@ -168,6 +172,10 @@ def main() -> int:
     call("build_reference_mirror_brief.py", ["--packet", str(mirror_packet), "--output", str(mirror_brief)])
     call("build_mentor_polish_brief.py", ["--mentor-profile", str(mentor_profile), "--xray-report", str(xray), "--revision-agenda", str(agenda), "--project-fact-sheet", str(fact_sheet), "--output", str(polish_brief)])
     call("build_mentor_polish_pass_briefs.py", ["--draft-map", str(draft_map), "--mentor-profile", str(mentor_profile), "--xray-report", str(xray), "--revision-agenda", str(agenda), "--project-fact-sheet", str(fact_sheet), "--reference-mirror-packet", str(mirror_packet), "--output-dir", str(polish_workspace_dir)])
+    call("build_mentor_lexicon.py", ["--mentor-profile", str(mentor_profile), "--output", str(mentor_lexicon)])
+    call("build_mentor_corpus_index.py", ["--mentor-manifest", str(manifest), "--output", str(mentor_corpus)])
+    call("build_micro_polish_packet.py", ["--draft-map", str(draft_map), "--mentor-profile", str(mentor_profile), "--mentor-lexicon", str(mentor_lexicon), "--mentor-corpus-index", str(mentor_corpus), "--xray-report", str(xray), "--output", str(micro_polish_packet)])
+    call("build_micro_polish_brief.py", ["--packet", str(micro_polish_packet), "--output", str(micro_polish_brief)])
 
     summary = {
         "schema_version": "0.1.0",

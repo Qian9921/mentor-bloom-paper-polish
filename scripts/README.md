@@ -10,6 +10,8 @@
 - `build_mentor_evolution_packet.py`
 - `build_mentor_evolution_brief.py`
 - `compile_mentor_profile.py`（仅 bootstrap / fallback，不是 canonical path）
+- `build_mentor_lexicon.py`
+- `build_mentor_corpus_index.py`
 - `build_draft_map.py`
 - `build_project_fact_sheet.py`
 - `build_paper_xray_packet.py`
@@ -23,6 +25,8 @@
 - `build_reference_mirror_brief.py`
 - `build_mentor_polish_brief.py`
 - `build_mentor_polish_pass_briefs.py`
+- `build_micro_polish_packet.py`
+- `build_micro_polish_brief.py`
 - `export_alignment_scorecard.py`
 - `run_term_consistency_check.py`
 - `diff_revision.py`
@@ -102,6 +106,16 @@ python3 scripts/run_p0_pipeline.py \
   --revision-agenda path/to/revision_agenda.json
 ```
 
+这会进一步产出：
+
+- `reference_mirror_packet.json`
+- `reference_mirror_brief.md`
+- `mentor_polish_workspace/`
+- `mentor_lexicon.json`
+- `mentor_corpus_index.json`
+- `micro_polish_packet.json`
+- `micro_polish_brief.md`
+
 说明：
 
 - 导师脑持续进化 workflow 推荐名：`$mentor-bloom`（简写 `$bloom`，兼容旧叫法 `$learning`）；
@@ -114,5 +128,6 @@ python3 scripts/run_p0_pipeline.py \
 - 真正的高质量导师脑蒸馏与最终改写，仍应由 Codex 在这些 artifact 合同之上执行；
 - `reference-mirror` 现在也走 agent-first：script 只打包 mirror snippets，agent 再做对照分析；
 - `mentor-polish` 当前新增了 pass-based workspace briefs，script 只产出任务包，agent 再按 pass 真正改写；
+- `micro-polish` 当前也走 agent-first：script 只打包 sentence-level tasks 与 lexicon/corpus 线索，agent 再逐句改；
 - `build_mentor_polish_brief.py` 可把 pipeline 产物整理成 agent 可直接消费的改稿 brief；
 - `export_alignment_scorecard.py` 用于 before/after xray 对比评估。
