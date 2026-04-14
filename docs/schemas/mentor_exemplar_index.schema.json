@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/mentor_exemplar_index.schema.json",
+  "title": "Mentor Exemplar Index",
+  "description": "Curated positive exemplar index extracted from mentor corpus for direct rhetorical imitation and retrieval.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "mentor_id",
+    "entries"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "mentor_id": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "entry_id",
+          "source_path",
+          "section",
+          "function",
+          "quality",
+          "text"
+        ],
+        "properties": {
+          "entry_id": { "type": "string" },
+          "source_path": { "type": "string" },
+          "line_hint": { "type": "integer" },
+          "section": { "type": "string" },
+          "function": { "type": "string" },
+          "quality": {
+            "type": "string",
+            "enum": ["high", "medium"]
+          },
+          "why_good": { "type": "string" },
+          "text": { "type": "string" },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

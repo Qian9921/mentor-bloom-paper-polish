@@ -12,6 +12,8 @@
 - `compile_mentor_profile.py`（仅 bootstrap / fallback，不是 canonical path）
 - `build_mentor_lexicon.py`
 - `build_mentor_corpus_index.py`
+- `build_mentor_exemplar_index.py`
+- `build_mentor_student_gap_model.py`
 - `build_draft_map.py`
 - `build_project_fact_sheet.py`
 - `build_paper_xray_packet.py`
@@ -113,6 +115,8 @@ python3 scripts/run_p0_pipeline.py \
 - `mentor_polish_workspace/`
 - `mentor_lexicon.json`
 - `mentor_corpus_index.json`
+- `mentor_exemplar_index.json`
+- `mentor_student_gap_model.json`
 - `micro_polish_packet.json`
 - `micro_polish_brief.md`
 

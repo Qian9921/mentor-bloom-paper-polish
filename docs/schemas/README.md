@@ -11,6 +11,8 @@
 - `mentor_profile_changelog_entry.schema.json`：导师脑版本晋升记录
 - `mentor_lexicon.schema.json`：导师专业写作词汇库
 - `mentor_corpus_index.schema.json`：导师句级/段级语料索引
+- `mentor_exemplar_index.schema.json`：导师高质量正向样例索引
+- `mentor_student_gap_model.schema.json`：导师-用户差距模型
 - `micro_polish_packet.schema.json`：逐句/逐词改稿任务包
 - `micro_polish_result.schema.json`：逐句/逐词改稿结果
 - `compiled_mentor_profile.schema.json`：导师脑编译产物

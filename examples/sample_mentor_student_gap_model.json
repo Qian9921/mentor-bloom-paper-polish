@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "generated_at": "2026-04-14T00:00:00Z",
+  "mentor_id": "sample",
+  "user_id": "sample-user",
+  "gap_types": [
+    {
+      "gap_type": "ai_smell",
+      "severity": "medium",
+      "description": "The draft still sounds unlike the mentor in several high-value sentences.",
+      "evidence_count": 3,
+      "example_findings": [
+        "generic novelty wording",
+        "summary-first result narration"
+      ],
+      "recommended_operator": "tighten_sentence"
+    }
+  ]
+}

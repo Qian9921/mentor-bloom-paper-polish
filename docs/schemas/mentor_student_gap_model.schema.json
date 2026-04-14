@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/mentor_student_gap_model.schema.json",
+  "title": "Mentor Student Gap Model",
+  "description": "Structured model of recurring gap types between a user's draft style and the mentor standard.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "mentor_id",
+    "gap_types"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "mentor_id": { "type": "string" },
+    "user_id": { "type": "string" },
+    "gap_types": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "gap_type",
+          "severity",
+          "description",
+          "evidence_count"
+        ],
+        "properties": {
+          "gap_type": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          },
+          "description": { "type": "string" },
+          "evidence_count": { "type": "integer", "minimum": 0 },
+          "example_findings": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "recommended_operator": { "type": "string" }
+        }
+      }
+    }
+  }
+}

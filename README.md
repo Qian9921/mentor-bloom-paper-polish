@@ -34,6 +34,9 @@ This repository focuses on three practical abilities:
 4. **Micro-Polish with mentor lexicon/corpus**  
    Accumulate mentor-specific professional wording, phrase replacements, and sentence-level exemplars so agents can polish sentence by sentence and even word by word.
 
+5. **Positive exemplars and gap models**  
+   Curate high-quality mentor exemplars and track recurring mentor-vs-user gap types so the system learns not only what the mentor likes, but also where the user most often diverges.
+
 这个仓库当前聚焦三个实用能力：
 
 1. **导师脑蒸馏**  
@@ -47,6 +50,9 @@ This repository focuses on three practical abilities:
 
 4. **逐句/逐词微观润色**  
    积累导师专业写作词汇库和语料库，让 agent 能做 sentence-level 甚至 word-level 的导师式改稿。
+
+5. **正向样例库与差距模型**  
+   建立导师高质量写作样例库，并跟踪用户最常偏离导师标准的 gap type，让系统既知道导师喜欢什么，也知道用户最容易错在哪里。
 
 ---
 

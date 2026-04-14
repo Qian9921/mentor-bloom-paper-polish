@@ -69,6 +69,8 @@ def main() -> int:
     polish_workspace_dir = args.output_dir / "mentor_polish_workspace"
     mentor_lexicon = args.output_dir / "mentor_lexicon.json"
     mentor_corpus = args.output_dir / "mentor_corpus_index.json"
+    mentor_exemplars = args.output_dir / "mentor_exemplar_index.json"
+    mentor_gap_model = args.output_dir / "mentor_student_gap_model.json"
     micro_polish_packet = args.output_dir / "micro_polish_packet.json"
     micro_polish_brief = args.output_dir / "micro_polish_brief.md"
 
@@ -177,6 +179,8 @@ def main() -> int:
     call("build_mentor_polish_pass_briefs.py", ["--draft-map", str(draft_map), "--mentor-profile", str(mentor_profile), "--xray-report", str(xray), "--revision-agenda", str(agenda), "--project-fact-sheet", str(fact_sheet), "--reference-mirror-packet", str(mirror_packet), "--output-dir", str(polish_workspace_dir)])
     call("build_mentor_lexicon.py", ["--mentor-profile", str(mentor_profile), "--output", str(mentor_lexicon)])
     call("build_mentor_corpus_index.py", ["--mentor-manifest", str(manifest), "--output", str(mentor_corpus)])
+    call("build_mentor_exemplar_index.py", ["--mentor-corpus-index", str(mentor_corpus), "--output", str(mentor_exemplars)])
+    call("build_mentor_student_gap_model.py", ["--xray-report", str(xray), "--mentor-id", args.mentor_id, "--user-id", "user", "--output", str(mentor_gap_model)])
     call("build_micro_polish_packet.py", ["--draft-map", str(draft_map), "--mentor-profile", str(mentor_profile), "--mentor-lexicon", str(mentor_lexicon), "--mentor-corpus-index", str(mentor_corpus), "--xray-report", str(xray), "--output", str(micro_polish_packet)])
     call("build_micro_polish_brief.py", ["--packet", str(micro_polish_packet), "--output", str(micro_polish_brief)])
 
