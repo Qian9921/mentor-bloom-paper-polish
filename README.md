@@ -98,6 +98,24 @@ For stricter long-paper review, upgrade to the **section swarm** model:
 - **每个 section：5 个审稿 agent + 1 个共识 agent + 1 个反查 agent**
 - 如果并发受限，就按 **waves** 分批执行，而不是减少逻辑编制
 
+There is also a deterministic helper to build the **section staffing artifact**:
+
+```bash
+python3 scripts/build_section_swarm_plan.py \
+  --draft-map path/to/draft_map.json \
+  --output-json path/to/section_swarm_plan.json \
+  --output-md path/to/section_swarm_plan.md
+```
+
+也可以用一个确定性脚本生成 **section 编制 artifact**：
+
+```bash
+python3 scripts/build_section_swarm_plan.py \
+  --draft-map path/to/draft_map.json \
+  --output-json path/to/section_swarm_plan.json \
+  --output-md path/to/section_swarm_plan.md
+```
+
 对于长论文，默认推荐：
 
 - **5 个审稿 agent + 1 个汇总代理 agent**
