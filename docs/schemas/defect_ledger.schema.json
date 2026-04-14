@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/defect_ledger.schema.json",
+  "title": "Defect Ledger",
+  "description": "Explicit must-fix defect ledger for mentor- or user-called writing problems.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "subject_id",
+    "defects"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "source_context": {
+      "type": "string"
+    },
+    "defects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "defect_id",
+          "issue",
+          "source_ref",
+          "status",
+          "blocking"
+        ],
+        "properties": {
+          "defect_id": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "source_ref": {
+            "type": "string"
+          },
+          "source_excerpt": {
+            "type": "string"
+          },
+          "target_file": {
+            "type": "string"
+          },
+          "target_locator": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "fixed",
+              "verified",
+              "rejected"
+            ]
+          },
+          "blocking": {
+            "type": "boolean"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

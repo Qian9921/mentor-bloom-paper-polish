@@ -37,6 +37,9 @@ This repository focuses on three practical abilities:
 5. **Positive exemplars and gap models**  
    Curate high-quality mentor exemplars and track recurring mentor-vs-user gap types so the system learns not only what the mentor likes, but also where the user most often diverges.
 
+6. **Explicit defect ledger**  
+   Treat mentor-called or user-called must-fix issues as blocking defects that must be cleared before the draft can be declared clean.
+
 这个仓库当前聚焦三个实用能力：
 
 1. **导师脑蒸馏**  
@@ -53,6 +56,9 @@ This repository focuses on three practical abilities:
 
 5. **正向样例库与差距模型**  
    建立导师高质量写作样例库，并跟踪用户最常偏离导师标准的 gap type，让系统既知道导师喜欢什么，也知道用户最容易错在哪里。
+
+6. **显式缺陷账本**  
+   把导师或用户点名的 must-fix 问题变成 blocking defects，在逐条核销前不允许宣称稿件已经 clean。
 
 ---
 
@@ -435,4 +441,3 @@ This repository is released under the MIT License. See `LICENSE`.
 - `docs/architecture/`
 - `docs/protocols/`
 - `docs/schemas/README.md`
-
