@@ -6,6 +6,18 @@ An agent-first framework for building a mentor-writing brain, diagnosing mature 
 
 ---
 
+## TL;DR / 一句话说明
+
+- **Build a mentor brain** from papers, comments, transcripts, and revision traces
+- **Diagnose a mature draft** with agent-authored xray reports
+- **Polish the paper** through pass-based, mentor-style revision workflows
+
+- **构建导师脑**
+- **诊断成熟稿**
+- **按导师式流程润色论文**
+
+---
+
 ## What this repository is / 这个仓库是什么
 
 This repository focuses on three practical abilities:
@@ -96,6 +108,20 @@ git clone https://github.com/Qian9921/mentor-bloom-paper-polish.git
 cd mentor-bloom-paper-polish
 ```
 
+### 1.5) Requirements / 运行依赖
+
+Minimal assumptions:
+
+- Python 3.10+
+- `pdftotext` available in `PATH` if you want PDF extraction
+- Codex CLI or a Codex-compatible agent environment if you want the full agent-first workflow
+
+最低依赖：
+
+- Python 3.10+
+- 若要抽 PDF 文本，需要系统里有 `pdftotext`
+- 若要走完整 agent-first 路径，需要 Codex CLI 或兼容环境
+
 ### 2) Prepare your mentor materials / 准备导师材料
 
 Place your supervisor materials under a private folder, for example:
@@ -159,6 +185,38 @@ If possible, also prepare a **clean prose-only export** for better polishing qua
 
 - `$learning` → use `$mentor-bloom` instead
 
+### How other users can actually invoke these skills / 其他用户如何真正使用这些 skill
+
+If you open this repository in Codex, the repo-local skill scaffolds under `.codex/skills/` are the intended entry points.
+
+Typical usage:
+
+```text
+$mentor-bloom
+$paper-xray
+$mentor-polish
+```
+
+如果你在 Codex 中打开这个仓库，`.codex/skills/` 下的 repo-local skill 就是推荐入口。
+
+典型调用方式：
+
+```text
+$mentor-bloom
+$paper-xray
+$mentor-polish
+```
+
+If your environment does **not** automatically expose repo-local skills, you still have two practical options:
+
+1. keep the repo open as the active workspace and use the docs/protocols/scripts manually
+2. copy the relevant skill scaffold into your own Codex skills directory
+
+如果你的环境**不会自动暴露** repo-local skills，也有两个简单办法：
+
+1. 直接在这个仓库里按 docs/protocols/scripts 手动走流程
+2. 把对应的 skill scaffold 复制到你自己的 Codex skills 目录
+
 ---
 
 ## Canonical workflows / 规范工作流
@@ -185,6 +243,25 @@ If possible, also prepare a **clean prose-only export** for better polishing qua
 3. Build reference mirror packet + brief
 4. Build mentor polish briefs + pass-based workspace
 5. Let Codex/agent revise section by section
+
+### Minimal public demo flow / 最小公开演示流程
+
+You can use the example files in `examples/` to understand the workflow shape without any private data:
+
+```bash
+python3 scripts/build_mentor_manifest.py \
+  --input-dir examples \
+  --output /tmp/mentor_manifest.json \
+  --mentor-id sample
+```
+
+然后结合：
+
+- `scripts/README.md`
+- `docs/protocols/`
+- `docs/schemas/`
+
+就能理解完整 agent-first 工作流应该怎么接起来。
 
 ---
 
@@ -241,6 +318,10 @@ This repository is intentionally kept clean for public use:
 - `.omx/`
 - 私密论文草稿
 
+This separation is intentional. The framework repo should remain safe to clone, browse, and reuse publicly.
+
+这种分离是刻意的：这个仓库应该保持“公开可 clone、可浏览、可复用”的状态。
+
 ---
 
 ## Current status / 当前状态
@@ -262,6 +343,18 @@ This repo already contains:
 - mentor-only polish mode
 - agent-first schema / protocol / tooling
 - mentor-bloom 持续进化脚手架
+
+And now also includes:
+
+- repo-level `AGENTS.md`
+- `LICENSE`
+- bilingual onboarding README
+
+并且现在还包含：
+
+- 仓库级 `AGENTS.md`
+- `LICENSE`
+- 中英双语 README
 
 ---
 
@@ -285,6 +378,6 @@ The most valuable next steps are:
 
 ## License / 许可
 
-No license file has been added yet. Add one before wider public reuse.
+This repository is released under the MIT License. See `LICENSE`.
 
-当前还没有补 license，准备公开长期使用前建议补上。
+本仓库采用 MIT License，见 `LICENSE`。
