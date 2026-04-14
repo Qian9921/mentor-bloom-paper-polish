@@ -41,6 +41,63 @@ Use multiple agents to audit the real draft directly, with enough context to und
 5. **Agent-only final acceptance**
    - Final pass/fail claims should come from agent review, not from heuristic scripts.
 
+## Recommended staffing
+
+For a long research paper, use a fixed staffing plan instead of improvising per run.
+
+### Default long-paper audit swarm
+
+Use **5 audit agents + 1 consensus agent**:
+
+1. **Intro / Problem Framing Auditor**
+   - openings
+   - transitions
+   - contribution framing
+
+2. **Method Exposition Auditor**
+   - subsection openings
+   - notation introduction
+   - equation bridges
+   - reader guidance
+
+3. **Experiment Setup / Baseline Auditor**
+   - setup openings
+   - baseline logic
+   - metric logic
+   - configuration placement
+
+4. **Results / Diagnostics Auditor**
+   - results openings
+   - scene-by-scene narration
+   - comparator scope
+   - benchmark-report tone
+
+5. **Case Study / Mechanism / Discussion / Conclusion Auditor**
+   - case-study openings
+   - mechanism explanation
+   - practical implication
+   - limitation / conclusion landing
+
+6. **Consensus Agent**
+   - merges audit reports
+   - deduplicates findings
+   - assigns blocking severity
+   - emits defect-ledger candidates
+
+### Smaller-paper fallback
+
+For a short paper or note, use **3 audit agents + 1 consensus agent**:
+
+- intro/method
+- experiments/results
+- discussion/conclusion
+- consensus
+
+### Hard rule
+
+Do not reduce the swarm to one agent merely because scripts can pre-slice the draft.
+Scripts may help locate spans, but the semantic judgment still belongs to the agents.
+
 ## When to use
 
 - final opening audits

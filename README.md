@@ -68,6 +68,32 @@ This repository focuses on three practical abilities:
 
 ---
 
+## Recommended audit staffing / 推荐审稿编制
+
+For a long paper, do **not** rely on one agent plus heuristics.
+
+Recommended default:
+
+- **5 audit agents + 1 consensus agent**
+  1. introduction / problem framing
+  2. method exposition
+  3. experiment setup / baselines
+  4. results / diagnostics
+  5. case study / mechanism / discussion / conclusion
+  6. consensus / defect-ledger aggregation
+
+对于长论文，默认推荐：
+
+- **5 个审稿 agent + 1 个汇总代理 agent**
+  1. 引言 / problem framing
+  2. 方法展开
+  3. 实验设置 / baseline / metrics
+  4. results / diagnostics
+  5. case study / mechanism / discussion / conclusion
+  6. 共识汇总 / defect ledger
+
+---
+
 ## Core design principles / 核心设计原则
 
 - **Skills guide, agents judge.**  
