@@ -31,6 +31,9 @@ This repository focuses on three practical abilities:
 3. **Mentor Polish**  
    Package the draft into pass-based workspaces so Codex/agents can revise the paper section by section in a mentor-like way.
 
+4. **Micro-Polish with mentor lexicon/corpus**  
+   Accumulate mentor-specific professional wording, phrase replacements, and sentence-level exemplars so agents can polish sentence by sentence and even word by word.
+
 这个仓库当前聚焦三个实用能力：
 
 1. **导师脑蒸馏**  
@@ -41,6 +44,9 @@ This repository focuses on three practical abilities:
 
 3. **导师式润色**  
    把稿件打包成 pass-based workspaces，让 Codex / agents 按导师式流程逐节修改。
+
+4. **逐句/逐词微观润色**  
+   积累导师专业写作词汇库和语料库，让 agent 能做 sentence-level 甚至 word-level 的导师式改稿。
 
 ---
 
@@ -58,6 +64,9 @@ This repository focuses on three practical abilities:
 - **Version everything.**  
   Mentor profiles, deltas, changelogs, and artifacts are meant to be inspectable, reviewable, and rollbackable.
 
+- **Sentence-level quality matters.**  
+  The framework should eventually support sentence-by-sentence and word-by-word mentor-style polishing through a structured mentor lexicon and corpus.
+
 - **Skill 只指导，agent 才判断。**  
   skill 负责 workflow 和 guardrails；script 负责准备 artifact；真正的判断、诊断、改写由 Codex / agent 完成。
 
@@ -69,6 +78,9 @@ This repository focuses on three practical abilities:
 
 - **所有关键对象都应版本化。**  
   导师脑 profile、delta、changelog、artifacts 都应可检查、可评审、可回滚。
+
+- **逐句质量也必须被建模。**  
+  框架最终应支持 sentence-level 甚至 word-level 的导师式改稿，这需要结构化的导师词汇库与语料库。
 
 ---
 

@@ -176,6 +176,57 @@ YanBrain v0.1 已经能做这些事：
 
 > “除了不要这样写，还应该怎样写？”
 
+## 3.5A 导师专业写作词汇库（Mentor Lexicon）
+
+这一层需要单独建模。
+
+原因是：
+
+> 很多导师风格不是体现在整段结构，而是体现在**词、短语、局部句法动作**。
+
+建议单独积累：
+
+- preferred technical terms
+- disallowed vague terms
+- comparator phrase templates
+- transition phrase templates
+- figure/table narration verbs
+- contribution-strengthening verbs
+- limitation/future-work pairing phrases
+- conclusion landing phrases
+
+这一层的目标不是收集“漂亮词汇”，
+而是收集：
+
+> **导师在本领域里会稳定使用、稳定拒绝、稳定替换的专业写作词法资源。**
+
+## 3.5B 导师语料库（Mentor Corpus）
+
+除了词汇库，还需要一个更细粒度的语料库。
+
+它不只是保存整篇论文，
+而是把高价值片段拆成可消费单元，例如：
+
+- abstract opening
+- abstract mechanism sentence
+- result takeaway sentence
+- figure introduction sentence
+- comparison sentence
+- limitation sentence
+- conclusion landing sentence
+
+每条语料都应有 tag：
+
+- section
+- function
+- rhetorical move
+- domain
+- trust tier
+
+这一层的意义是：
+
+> 以后 agent 做逐句改稿时，不只是调用规则，而是能直接参考“导师在同类句子上怎么写”。
+
 ## 3.6 演化记忆层（Evolution Memory）
 
 这是 v0.2 最关键的新层。
@@ -387,6 +438,21 @@ $mentor-bloom
 - 用户更省力；
 
 它才算真的变强。
+
+## 7.4 逐句 / 逐词学习闭环
+
+导师脑如果要继续变强，就不能只在 section 或 paragraph 层学习，
+还要新增一个更微观的学习闭环：
+
+1. 从导师语料中抽 sentence-level exemplars
+2. 从真实改稿中记录 word-level substitutions
+3. 归纳高频替换模式
+4. 沉淀成 lexicon + corpus
+5. 反哺 micro-polish pass
+
+如果没有这层，
+导师脑会更像“会讲大道理”，
+而不够像“真的会逐句改稿的导师”。
 
 ---
 

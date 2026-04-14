@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/mentor_corpus_index.schema.json",
+  "title": "Mentor Corpus Index",
+  "description": "Sentence-level and paragraph-level index of mentor exemplars for micro-polish and reference-mirror use.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "mentor_id", "entries"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "mentor_id": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["entry_id", "source_path", "section", "function", "text"],
+        "properties": {
+          "entry_id": { "type": "string" },
+          "source_path": { "type": "string" },
+          "line_hint": { "type": "integer" },
+          "section": { "type": "string" },
+          "function": { "type": "string" },
+          "rhetorical_move": { "type": "string" },
+          "text": { "type": "string" },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

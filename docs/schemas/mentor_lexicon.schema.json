@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/mentor_lexicon.schema.json",
+  "title": "Mentor Lexicon",
+  "description": "Structured mentor-specific professional writing lexicon for sentence-level and word-level polishing.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "generated_at", "mentor_id", "entries"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "mentor_id": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["term", "category", "status"],
+        "properties": {
+          "term": { "type": "string" },
+          "category": {
+            "type": "string",
+            "enum": [
+              "preferred_term",
+              "disallowed_term",
+              "transition_phrase",
+              "comparison_phrase",
+              "figure_phrase",
+              "conclusion_phrase",
+              "limitation_phrase",
+              "generic_phrase_replacement"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["preferred", "avoid", "contextual"]
+          },
+          "replacement_hint": { "type": "string" },
+          "notes": { "type": "string" },
+          "source_evidence": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

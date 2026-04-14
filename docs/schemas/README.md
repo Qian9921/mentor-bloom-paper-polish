@@ -9,6 +9,8 @@
 - `mentor_evolution_packet.schema.json`：给 Codex / agent 消费的导师脑增量进化包
 - `mentor_profile_delta.schema.json`：导师脑增量升级提案
 - `mentor_profile_changelog_entry.schema.json`：导师脑版本晋升记录
+- `mentor_lexicon.schema.json`：导师专业写作词汇库
+- `mentor_corpus_index.schema.json`：导师句级/段级语料索引
 - `compiled_mentor_profile.schema.json`：导师脑编译产物
 - `project_fact_sheet.schema.json`：轻量项目事实表
 - `paper_xray_packet.schema.json`：给 Codex / agent 消费的诊断包

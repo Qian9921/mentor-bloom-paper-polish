@@ -138,6 +138,36 @@ MentorPolish v0.2 应该做到：
 - improve precision
 - strengthen local punch
 
+### Pass 3A：Micro-Polish Pass（新增）
+
+这一步专门对应一个更强的需求：
+
+> **逐句，甚至逐词地查和改。**
+
+它不是普通 sentence pass 的重复，
+而是更细的导师式微观改稿层。
+
+这一层主要处理：
+
+- word replacement
+- phrase replacement
+- comparator phrasing
+- transition micro-fixes
+- hedge / strength calibration
+- local rhythm smoothing
+- sentence ending landing
+
+并且必须消费：
+
+- mentor lexicon
+- mentor corpus
+- sentence-level rewrite patterns
+
+也就是说，这一步不是“凭感觉润色”，
+而是：
+
+> **带着导师专业写作词汇库和语料库做逐句/逐词改稿。**
+
 ### Pass 4：Terminology Pass
 
 - unify technical terms
@@ -197,6 +227,17 @@ MentorPolish v0.2 推荐显式引入三个判断器。
 
 这三个 judge 不一定都要是独立 agent，但逻辑上必须存在。
 
+另外，我建议再补一个：
+
+## 4.4 Lexicon Judge
+
+问题：
+
+- 这句话里的词，是否真的是导师在本领域会用的词？
+- 这里有没有更像导师、更专业、更不模糊的替换？
+
+这个 judge 会显著提升逐句/逐词改稿质量。
+
 ---
 
 ## 5. polish 不应只做“纠错”，还应做“强化”
@@ -229,6 +270,20 @@ MentorPolish v0.2 推荐显式引入三个判断器。
 - improve paragraph rhythm
 - improve implication articulation
 
+## 5.3 Micro Actions（新增）
+
+为了支持逐句/逐词改稿，我建议显式加入一批微动作：
+
+- replace_vague_word_with_domain_term
+- replace_generic_gain_phrase_with_scoped_gain_phrase
+- replace_spoken_transition_with_academic_transition
+- replace_loose_comparator_with_named_comparator
+- tighten_weak_verb
+- delete_empty_adverb
+- swap_generic_noun_for_paper_defined_noun
+- sharpen_sentence_ending
+- normalize_parallel_structure
+
 ---
 
 ## 6. Reference Mirror 在 polish 中的位置
@@ -256,6 +311,8 @@ reference-mirror 不应是可有可无的辅助项。
 MentorPolish v0.2 的规范输入至少应包含：
 
 - compiled mentor profile
+- mentor lexicon
+- mentor corpus index
 - xray report
 - revision agenda
 - project fact sheet
@@ -287,6 +344,31 @@ MentorPolish v0.2 的规范输入至少应包含：
 6. 这轮是否留下了清晰的改稿理由？
 
 任何一条答不清，都不算高质量完成。
+
+---
+
+## 8A. 为什么逐句/逐词能力必须做
+
+如果没有逐句/逐词级能力，
+系统会一直停留在：
+
+- 结构更对
+- 段落更顺
+- 但句子还不够“像导师亲手改过”
+
+而你真正的痛点之一，就是：
+
+> 稿子明明大方向没错，但老师一看还是觉得“有机器味、AI 味、不够准、不够像他”。
+
+这类问题，最终很多都发生在：
+
+- word choice
+- phrase choice
+- local sentence rhythm
+- comparator phrasing
+
+所以 `micro-polish + mentor lexicon/corpus` 不是附属品，
+而是让系统跨过“像导师的最后一层门槛”的关键。
 
 ---
 
