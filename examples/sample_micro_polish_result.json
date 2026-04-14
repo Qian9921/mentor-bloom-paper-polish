@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "generated_at": "2026-04-14T00:00:00Z",
+  "draft_id": "sample_mature_draft",
+  "source_file": "examples/sample_mature_draft.md",
+  "revisions": [
+    {
+      "task_id": "sample-micro-001",
+      "section_id": "section-001-abstract",
+      "paragraph_id": "p-001-001",
+      "original_sentence": "This paper presents a very novel integrated positioning framework for urban navigation.",
+      "revised_sentence": "This paper presents an integrated navigation framework for urban navigation in challenging signal conditions.",
+      "reason": "Remove hype phrasing and align the wording with mentor-preferred terminology.",
+      "evidence_used": [
+        "sample_mentor_feedback.txt:2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "task_id": "sample-micro-002",
+      "section_id": "section-001-abstract",
+      "paragraph_id": "p-001-001",
+      "original_sentence": "It is worth noting that the method improves localization accuracy under difficult conditions.",
+      "revised_sentence": "The method improves positioning accuracy under difficult conditions.",
+      "reason": "Remove template phrasing and replace the looser term with the mentor-preferred technical term.",
+      "evidence_used": [
+        "sample_mentor_feedback.txt:3"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "unresolved_tasks": []
+}

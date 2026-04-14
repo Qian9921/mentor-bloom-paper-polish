@@ -267,7 +267,8 @@ If your environment does **not** automatically expose repo-local skills, you sti
 1. Build mentor lexicon
 2. Build mentor corpus index
 3. Build micro-polish packet + brief
-4. Let Codex/agent revise sentence-level tasks
+4. Let Codex/agent author `micro_polish_result.json`
+5. Apply the result deterministically with `scripts/apply_micro_polish_result.py`
 
 ### Minimal public demo flow / 最小公开演示流程
 

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/micro_polish_result.schema.json",
+  "title": "Micro Polish Result",
+  "description": "Agent-authored sentence-level and word-level revision result for deterministic application.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "source_file",
+    "revisions"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "draft_id": { "type": "string" },
+    "source_file": { "type": "string" },
+    "revisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "task_id",
+          "section_id",
+          "original_sentence",
+          "revised_sentence",
+          "reason"
+        ],
+        "properties": {
+          "task_id": { "type": "string" },
+          "section_id": { "type": "string" },
+          "paragraph_id": { "type": "string" },
+          "original_sentence": { "type": "string" },
+          "revised_sentence": { "type": "string" },
+          "reason": { "type": "string" },
+          "evidence_used": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "unresolved_tasks": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
