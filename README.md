@@ -104,6 +104,8 @@ This repository focuses on three practical abilities:
 ├─ templates/         # Paragraph cards + section contracts
 ├─ hooks/             # Hook design notes / placeholders
 ├─ examples/          # Safe sample inputs for public/demo use
+├─ .codex/commands/   # Repo-local Codex command docs
+├─ .codex/hooks.json  # Lightweight hook wiring example
 └─ .codex/skills/     # Repo-local Codex skill scaffolds
 ```
 
@@ -117,6 +119,8 @@ This repository focuses on three practical abilities:
 - `scripts/`：确定性工位，不替代 agent 思考  
 - `templates/`：paragraph cards 与 section contracts  
 - `examples/`：公开可用的示例输入  
+- `.codex/commands/`：repo-local command 文档
+- `.codex/hooks.json`：轻量 hook 配置示例
 - `.codex/skills/`：repo-local skill 入口
 
 ---
@@ -418,3 +422,15 @@ The most valuable next steps are:
 This repository is released under the MIT License. See `LICENSE`.
 
 本仓库采用 MIT License，见 `LICENSE`。
+
+
+---
+
+## More docs / 更多文档
+
+- `docs/install.md`
+- `docs/quickstart.md`
+- `docs/architecture/`
+- `docs/protocols/`
+- `docs/schemas/README.md`
+

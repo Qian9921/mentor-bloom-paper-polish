@@ -1,0 +1,28 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 hooks/session_start_summary.py",
+            "statusMessage": "Mentor Bloom repo context"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 hooks/post_bash_json_check.py",
+            "statusMessage": "Checking generated mentor-bloom artifacts"
+          }
+        ]
+      }
+    ]
+  }
+}
