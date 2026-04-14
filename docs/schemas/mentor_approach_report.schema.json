@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mentor-bloom.local/schemas/mentor_approach_report.schema.json",
+  "title": "Mentor Approach Report",
+  "description": "Pre-revision report estimating how close a draft is to the mentor writing standard and where the largest gaps remain.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "draft_id",
+    "overall_score",
+    "verdict",
+    "dimensions",
+    "top_gaps",
+    "strengths",
+    "revision_goal"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "draft_id": { "type": "string" },
+    "overall_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "verdict": { "type": "string" },
+    "dimensions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "score", "out_of", "summary", "target_direction"],
+        "properties": {
+          "name": { "type": "string" },
+          "score": { "type": "number" },
+          "out_of": { "type": "number" },
+          "summary": { "type": "string" },
+          "target_direction": { "type": "string" }
+        }
+      }
+    },
+    "top_gaps": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "strengths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "revision_goal": { "type": "string" },
+    "recommended_order": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

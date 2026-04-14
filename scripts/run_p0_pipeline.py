@@ -63,6 +63,8 @@ def main() -> int:
     packet_dir = args.output_dir / "revision_packet"
     mirror_packet = args.output_dir / "reference_mirror_packet.json"
     mirror_brief = args.output_dir / "reference_mirror_brief.md"
+    approach_report_json = args.output_dir / "mentor_approach_report.json"
+    approach_report_md = args.output_dir / "mentor_approach_report.md"
     polish_brief = args.output_dir / "mentor_polish_brief.md"
     polish_workspace_dir = args.output_dir / "mentor_polish_workspace"
     mentor_lexicon = args.output_dir / "mentor_lexicon.json"
@@ -168,6 +170,7 @@ def main() -> int:
         return 0
 
     call("build_revision_packet.py", ["--draft-map", str(draft_map), "--mentor-profile", str(mentor_profile), "--xray-report", str(xray), "--revision-agenda", str(agenda), "--output-dir", str(packet_dir)])
+    call("build_mentor_approach_report.py", ["--xray-report", str(xray), "--mentor-profile", str(mentor_profile), "--output-json", str(approach_report_json), "--output-md", str(approach_report_md)])
     call("build_reference_mirror_packet.py", ["--draft-map", str(draft_map), "--xray-report", str(xray), "--revision-agenda", str(agenda), "--mentor-manifest", str(manifest), "--mentor-profile", str(mentor_profile), "--output", str(mirror_packet)])
     call("build_reference_mirror_brief.py", ["--packet", str(mirror_packet), "--output", str(mirror_brief)])
     call("build_mentor_polish_brief.py", ["--mentor-profile", str(mentor_profile), "--xray-report", str(xray), "--revision-agenda", str(agenda), "--project-fact-sheet", str(fact_sheet), "--output", str(polish_brief)])

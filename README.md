@@ -29,7 +29,7 @@ This repository focuses on three practical abilities:
    Diagnose a mature draft for mentor drift, AI flavor, terminology problems, comparison issues, transition weakness, and paragraph-architecture problems.
 
 3. **Mentor Polish**  
-   Package the draft into pass-based workspaces so Codex/agents can revise the paper section by section in a mentor-like way.
+   Before revision, estimate the draft's current proximity to the mentor standard, then package the draft into pass-based workspaces so Codex/agents can revise the paper section by section in a mentor-like way.
 
 4. **Micro-Polish with mentor lexicon/corpus**  
    Accumulate mentor-specific professional wording, phrase replacements, and sentence-level exemplars so agents can polish sentence by sentence and even word by word.
@@ -260,11 +260,12 @@ If your environment does **not** automatically expose repo-local skills, you sti
 
 ### C. Mentor polish / 导师式润色
 
-1. Build revision agenda brief
-2. Have Codex/agent author `revision_agenda.json`
-3. Build reference mirror packet + brief
-4. Build mentor polish briefs + pass-based workspace
-5. Let Codex/agent revise section by section
+1. Build or load a mentor-approach report (score + gaps)
+2. Build revision agenda brief
+3. Have Codex/agent author `revision_agenda.json`
+4. Build reference mirror packet + brief
+5. Build mentor polish briefs + pass-based workspace
+6. Let Codex/agent revise section by section
 
 ### D. Micro polish / 逐句微观润色
 

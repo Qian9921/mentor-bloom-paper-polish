@@ -22,6 +22,7 @@
 - `reference_mirror_packet.schema.json`：导师/参考镜像比对包
 - `mentor_polish_workspace.schema.json`：pass-based mentor-polish 工作区清单
 - `mentor_alignment_scorecard.schema.json`：修改后对齐评分
+- `mentor_approach_report.schema.json`：改稿前的导师趋近度报告
 
 设计原则：
 

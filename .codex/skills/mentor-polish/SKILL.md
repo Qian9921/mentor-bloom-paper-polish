@@ -12,9 +12,10 @@ Scripts package. Agents rewrite.
 </Canonical_Rule>
 
 <Typical_Flow>
-1. Prepare revision agenda
-2. Build revision packet
-3. Build reference mirror packet + brief
-4. Build mentor-polish brief + pass workspace
-5. Let Codex/agent revise by pass (macro, paragraph, sentence, terminology, verify)
+1. Build or load a mentor-approach report (score + gaps)
+2. Prepare revision agenda
+3. Build revision packet
+4. Build reference mirror packet + brief
+5. Build mentor-polish brief + pass workspace
+6. Let Codex/agent revise by pass (macro, paragraph, sentence, terminology, verify)
 </Typical_Flow>

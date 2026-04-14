@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "generated_at": "2026-04-14T00:00:00Z",
+  "draft_id": "sample_mature_draft",
+  "overall_score": 58,
+  "verdict": "mid-stage draft; strong work remains",
+  "dimensions": [
+    {
+      "name": "mentor-drift",
+      "score": 2,
+      "out_of": 5,
+      "summary": "The draft still sounds unlike the mentor in several high-value sentences.",
+      "target_direction": "push toward 5/5 mentor-grade writing quality"
+    }
+  ],
+  "top_gaps": [
+    "section-001-abstract: generic novelty wording",
+    "section-001-abstract: terminology inconsistency"
+  ],
+  "strengths": [
+    "transition-rhythm: basic section ordering is present"
+  ],
+  "revision_goal": "Reduce AI flavor and replace generic terms with mentor-preferred technical wording.",
+  "recommended_order": [
+    "abstract",
+    "results narration",
+    "micro-polish"
+  ]
+}
